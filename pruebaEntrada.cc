@@ -3,7 +3,7 @@ using namespace std;
 
 class A{
 	public:
-		void foo(){
+		virtual void foo(){
 			cout << "A" << endl;
 		}
 
@@ -11,7 +11,7 @@ class A{
 
 class  B: public A{
 	public:
-		void foo(){
+		virtual void foo(){
 			cout << "B" << endl;
 		}
 };
@@ -64,25 +64,16 @@ int main(){
 	e->goo();
 
 	cout << "----------" << endl;
+		
+	cout << "ac->foo()" << endl;
+	A ac;
+	ac = *c;
+	ac.foo();
 
-	/*
-		 A a1;
-		 a1  = *e;
-		 cout << "e->foo()" << endl;
-		 e->foo();
-		 cout << "e.goo()" << endl;
-		 e->goo();
-		 cout << "e1.foo()" << endl;
-		 E e1;
-		 e1 = *a; // error	en la conversion
-		 e1.foo();
-		 cout << "a1.foo()" << endl;
-		 a1.foo();
-		 cout << "a1.goo()" << endl;
-	//a1.goo(); // error, la clase A no tiene el metodo go
-	cout << "e->goo()" << endl;
-	e->goo();
-	cout << "c->foo()" << endl;
-	c->foo();
-	*/
+
+	cout << "ea->foo()" << endl;
+	E ea;
+	//ea = *a;
+	//ea.foo(); // error
+	
 }
