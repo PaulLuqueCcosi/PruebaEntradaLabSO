@@ -3,7 +3,7 @@ using namespace std;
 
 class A{
 	public:
-		virtual void foo(){
+		void foo(){
 			cout << "A" << endl;
 		}
 
@@ -11,14 +11,14 @@ class A{
 
 class  B: public A{
 	public:
-		virtual void foo(){
+		void foo(){
 			cout << "B" << endl;
 		}
 };
 
 class C: public A{
 	public:
-		virtual void goo(){
+		void goo(){
 			cout << "C" << endl;
 		}
 };
